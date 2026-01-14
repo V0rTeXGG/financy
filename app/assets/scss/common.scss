@@ -1,0 +1,16 @@
+@use './common/fonts';
+@use './common/reset';
+@use './common/primeVue';
+@use './common/transitions';
+
+body {
+    --header-h: calc(#{$header-h});
+
+    background-color: $gray-50;
+}
+
+.container {
+    width: 128rem;
+    max-width: 192rem;
+    margin: 0 auto;
+}

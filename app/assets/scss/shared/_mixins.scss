@@ -1,0 +1,83 @@
+@use 'variables' as *;
+@use 'functions' as *;
+
+@mixin respond-to($name, $bp: $breakpoints) {
+    $max: breakpoint-max($name, $bp);
+
+    @if $max {
+        @media (max-width: $max) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin font($alias, $name, $weight) {
+    @font-face {
+        font-family: $alias;
+        src: url("~/assets/fonts/" + $name + ".woff2") format("woff2");
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+@mixin hover {
+    @media (hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin actions-off {
+    user-select: none;
+    pointer-events: none;
+}
+
+@mixin text($name) {
+    @if $name == logo {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        letter-spacing: 0;
+        font-weight: bold;
+    }
+
+    @if $name == title {
+        font-size: 3.6rem;
+        line-height: 4.4rem;
+        letter-spacing: -2%;
+        font-weight: bold;
+    }
+
+    @if $name == smallTitle {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        font-weight: 600;
+    }
+
+    @if $name == p1 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        letter-spacing: 0;
+        font-weight: 600;
+    }
+
+    @if $name == p2 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        letter-spacing: 0;
+        font-weight: 500;
+    }
+}
+
+@mixin font($alias, $name, $weight) {
+  @font-face {
+    font-family: $alias;
+    src: url("assets/fonts/" + $name + ".woff") format("woff");
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}

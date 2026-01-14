@@ -1,0 +1,6 @@
+// Shared
+@use '../shared/mixins.scss' as *;
+
+@include font("Inter", "Inter-Medium", 500);
+@include font("Inter", "Inter-SemiBold", 600);
+@include font("Inter", "Inter-Bold", bold);

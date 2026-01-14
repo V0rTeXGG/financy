@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use 'sass:list';
+
+@function breakpoint-max($name, $bp: $breakpoints) {
+  $next: breakpoint-next($name, $bp);
+
+  @return if($next, breakpoint-min($next, $bp) - .02, null);
+}
+
+@function breakpoint-next($name, $bp: $breakpoints) {
+  $breakpoint-names: map.keys($bp);
+
+  $n: list.index($breakpoint-names, $name);
+
+  @return if($n != null and $n < list.length($breakpoint-names), list.nth($breakpoint-names, $n + 1), null);
+}
+
+@function breakpoint-min($name, $bp: $breakpoints) {
+  $min: map.get($bp, $name);
+
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-next($name, $bp: $breakpoints, $breakpoint-names: map-keys($bp)) {
+  $n: index($breakpoint-names, $name);
+
+  @return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}

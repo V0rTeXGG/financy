@@ -1,0 +1,28 @@
+@use '../shared/variables' as *;
+
+.p-datatable {
+    width: 100%;
+    color: $gray-600;
+
+    &-column-header-content {
+        padding: .8rem 2.4rem;
+        border-top: 1px solid $gray-100;
+        background-color: $gray-50;
+    }
+
+    .p-datatable-thead {
+        th {
+            border-color: $gray-100;
+        }
+    }
+
+    .p-datatable-tbody {
+        td {
+            padding: 2.4rem;
+            border-color: $gray-100;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

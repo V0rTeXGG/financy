@@ -1,0 +1,35 @@
+/*  Fonts */
+$base-font: "Inter", sans-serif;
+$base-font-size: 1.6rem;
+$additional-font: "Inter", sans-serif;
+$body-color: #B0BFC9;
+
+$header-h: 7.2rem;
+
+/* Breakpoints */
+$breakpoints: (
+        mobile: 0,
+        tablet-sm: 768px,
+        s_tablet: 920px,
+        tablet: 1024px,
+        laptop: 1280px,
+        desktop: 1440px,
+        ultra: 1921px,
+);
+
+// Transition
+$default-transition: .3s ease-in-out;
+
+// Colors
+$white: #ffffff;
+$gray-950: #22292f;
+$gray-600: #516778;
+$gray-300: #b0bfC9;
+$gray-100: #eceff2;
+$gray-50: #f9fafb;
+$dark: #101828;
+$brand-600: #155eef;
+$green-600: #0b9055;
+$green-300: #dcfae6;
+$red-600: #d92d20;
+$red-300: #fee4e2;
