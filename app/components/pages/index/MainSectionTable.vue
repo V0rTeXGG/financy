@@ -112,6 +112,16 @@ function handleConvertAmount(text: number, addition: boolean) {
                     </span>
                 </template>
             </Column>
+            <Column>
+                <template #body>
+                    <div :class="$style.itemAbility">
+                        <UIIcon
+                            name="minus"
+                            :class="$style.more"
+                        />
+                    </div>
+                </template>
+            </Column>
         </DataTable>
     </div>
 </template>
@@ -151,6 +161,12 @@ function handleConvertAmount(text: number, addition: boolean) {
         &._green {
             color: $green-600;
         }
+    }
+
+    .itemAbility {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .desctiptionContent {

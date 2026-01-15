@@ -5,14 +5,14 @@
     color: $gray-600;
 
     &-column-header-content {
-        padding: .8rem 2.4rem;
         border-top: 1px solid $gray-100;
-        background-color: $gray-50;
     }
 
     .p-datatable-thead {
         th {
+            padding: .8rem 2.4rem;
             border-color: $gray-100;
+            background-color: $gray-50;
         }
     }
 

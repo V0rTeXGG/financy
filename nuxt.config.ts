@@ -22,9 +22,9 @@ export default defineNuxtConfig({
         '~/assets/scss/common.scss',
     ],
     runtimeConfig: {
-        PROXY_URL: 'https://bf2f7ece633b7d90.mokky.dev',
+        PROXY_URL: process.env.PROXY_URL,
         public: {
-            PROXY_URL: 'https://bf2f7ece633b7d90.mokky.dev',
+            PROXY_URL: process.env.PROXY_URL,
         },
     },
 
