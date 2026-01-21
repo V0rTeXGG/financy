@@ -115,10 +115,13 @@ function handleConvertAmount(text: number, addition: boolean) {
             <Column>
                 <template #body>
                     <div :class="$style.itemAbility">
-                        <UIIcon
-                            name="minus"
-                            :class="$style.more"
-                        />
+                        <UIButton :class="$style.buttonMore">
+                            <UIIcon
+                                name="dots"
+                                size="small"
+                                :class="$style.moreIcon"
+                            />
+                        </UIButton>
                     </div>
                 </template>
             </Column>
@@ -183,5 +186,10 @@ function handleConvertAmount(text: number, addition: boolean) {
 
     .desctiption {
         @include text(p2);
+    }
+
+    .buttonMore {
+        padding: 0;
+        background-color: transparent;
     }
 </style>
